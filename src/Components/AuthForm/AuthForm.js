@@ -7,8 +7,8 @@ export default function AuthForm({
   setUsername,
   password,
   setPassword,
-  handleSubmit,
   errorMsg,
+  handleSubmit
 }) {
   return (
     <form className="form" onSubmit={handleSubmit}>
