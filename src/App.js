@@ -26,23 +26,24 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+         
             {user && (
               <><Home /><button onClick={logoutUser}>Log out</button></>
             )}
             {!user && <Auth setUser={setUser} />}
-          </Route>
-          {/* <Route exact path="/auth">
-            <Auth setUser={setUser} />
-          </Route> */}
+          
+          
           <Route exact path="/:username">
             <User />
           </Route>
           <Route exact path=":username/edit" />
           <Route exact path="/:username/:journal">
             <Journal />
-          </Route>
-          <Route exact path="/about">
-            <About />
           </Route>
         </Switch>
       </BrowserRouter>
