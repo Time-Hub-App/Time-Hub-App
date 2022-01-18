@@ -21,18 +21,17 @@ function App() {
           <Route exact path="/about">
             <About />
           </Route>
-          {/* 
           {user && (
             <>
               <Home />
               <button onClick={logoutUser}>Log out</button>
             </>
           )}
-          {!user && <Auth setUser={setUser} />} */}
 
           <Route exact path="/auth">
             <Auth setUser={setUser} />
           </Route>
+
           <Route exact path="/:username">
             <User />
           </Route>
