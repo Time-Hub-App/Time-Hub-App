@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import AuthForm from '../../Components/AuthForm/AuthForm';
-import { signInUser, signupUser } from '../../Services/users';
-
+import Header from '../../Components/Header/Header';
+import { signInUser, signUpUser } from '../../Services/users';
 
 export default function Auth({ setUser }) {
   const [type, setType] = useState('Login');
@@ -16,18 +16,41 @@ export default function Auth({ setUser }) {
       if (type === 'Login') {
         resp = await signInUser(email, password);
       } else {
-        resp = await signupUser(email, password);
+        resp = await signUpUser(email, password);
       }
       setUser(resp);
-    } catch {
-      setErrorMsg('Your email/password is incorrect, try again or sign up. ');
+    } catch (e) {
+      setErrorMsg(`Your email/password is incorrect, try again or sign up: ${e.message}`);
     }
   };
   return (
-    <div className="complete"><h3>{type}</h3><AuthForm email={email} setEmail={setEmail} password={password} setPassword={setPassword} errorMsg={errorMsg} handleSubmit={handleSubmit} />
-      <button onClick={() => { setType('Sign Up'); } } className={classNames({ active: type === 'Sign Up' })}>Sign Up</button>
-      <button onClick={() => { setType('Login'); } } className={classNames({ active: type === 'Login' })}>Login</button>
-            
+    <div className="complete">
+      <Header />
+      <h3>{type}</h3>
+      <AuthForm
+        email={email}
+        setEmail={setEmail}
+        password={password}
+        setPassword={setPassword}
+        errorMsg={errorMsg}
+        handleSubmit={handleSubmit}
+      />
+      <button
+        onClick={() => {
+          setType('Sign Up');
+        }}
+        className={classNames({ active: type === 'Sign Up' })}
+      >
+        Sign Up
+      </button>
+      <button
+        onClick={() => {
+          setType('Login');
+        }}
+        className={classNames({ active: type === 'Login' })}
+      >
+        Login
+      </button>
     </div>
   );
 }
