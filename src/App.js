@@ -11,27 +11,18 @@ import { getUser, logout } from './Services/users';
 function App() {
   const [user, setUser] = useState(getUser());
 
-  useEffect(() => {
-    const session = getUser();
-
-    if (session?.user) setUser(session.user);
-  }, []);
-
-  const logoutUser = async () => {
-    await logout();
-    setUser(null);
-  };
   return (
     <div className="App">
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home user={user} />
           </Route>
           <Route exact path="/about">
             <About />
           </Route>
 
+          {/* 
           {user && (
             <>
               <Home />
@@ -40,6 +31,11 @@ function App() {
           )}
           {!user && <Auth setUser={setUser} />}
 
+          {!user && <Auth setUser={setUser} />} */}
+
+          <Route exact path="/auth">
+            <Auth setUser={setUser} />
+          </Route>
           <Route exact path="/:username">
             <User />
           </Route>
