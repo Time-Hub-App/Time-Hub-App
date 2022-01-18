@@ -1,6 +1,8 @@
 import React from 'react';
 
+
 export default function AuthForm({ email, setEmail, password, setPassword, handleSubmit, errorMsg }) {
+
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div>
