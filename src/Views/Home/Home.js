@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import './Home.css';
-// import Header from '../../Components/Header/Header.js';
-// import Footer from '../../Components/Footer/Footer.js';
+import Header from '../../Components/Header/Header.js';
+import Footer from '../../Components/Footer/Footer.js';
 
 export default function Home({ handleSubmit }) {
   const [searchBar, setSearchBar] = useState();
 
   return (
     <>
+      <Header />
       <div>
         <form>
           <h1>TeaTime</h1>
@@ -30,11 +31,7 @@ export default function Home({ handleSubmit }) {
           </div>
         </form>
       </div>
+      <Footer />
     </>
-    // <div>
-    //   {/* <Header /> */}
-    //   Home
-    //   {/* <Footer /> */}
-    // </div>
   );
 }

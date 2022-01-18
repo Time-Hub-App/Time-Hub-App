@@ -1,5 +1,13 @@
+import { NavLink } from 'react-router-dom';
 import './Header.css';
+import { logout } from '../../Services/users';
 
 export default function Header() {
-  return <header>Header</header>;
+  return (
+    <header>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/auth">Auth</NavLink>
+      <h3 onClick={logout}>LogOut</h3>
+    </header>
+  );
 }
