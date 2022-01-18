@@ -14,6 +14,9 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
           <Route exact path="/auth">
             <Auth />
           </Route>
@@ -22,9 +25,6 @@ function App() {
           </Route>
           <Route exact path="/:username/:jounal">
             <Journal />
-          </Route>
-          <Route exact path="/about">
-            <About />
           </Route>
         </Switch>
       </BrowserRouter>
