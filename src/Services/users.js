@@ -1,7 +1,12 @@
 import { client, checkError } from './client.js';
 
-export async function signupUser(email, username, password) {
-  const { user, error } = await client.auth.signUp({ email, username, password });
+export function getUser() {
+  return client.auth.session();
+}
+  
+
+export async function signupUser(email, password) {
+  const { user, error } = await client.auth.signUp({ email, password });
   if (error) {
     throw error;
   }
