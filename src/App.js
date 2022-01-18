@@ -21,21 +21,31 @@ function App() {
           <Route exact path="/about">
             <About />
           </Route>
+<<<<<<< HEAD
 
           {/* 
+=======
+>>>>>>> fb4e4be0c97af27a898fc72195373d66c040a41c
           {user && (
             <>
               <Home />
               <button onClick={logoutUser}>Log out</button>
             </>
           )}
+<<<<<<< HEAD
           {!user && <Auth setUser={setUser} />}
 
           {!user && <Auth setUser={setUser} />} */}
+=======
+>>>>>>> fb4e4be0c97af27a898fc72195373d66c040a41c
 
           <Route exact path="/auth">
             <Auth setUser={setUser} />
           </Route>
+<<<<<<< HEAD
+=======
+
+>>>>>>> fb4e4be0c97af27a898fc72195373d66c040a41c
           <Route exact path="/:username">
             <User />
           </Route>
