@@ -3,13 +3,13 @@ import './Home.css';
 import Header from '../../Components/Header/Header.js';
 import Footer from '../../Components/Footer/Footer.js';
 
-export default function Home({ handleSubmit, user }) {
+export default function Home({ handleSubmit, user, setUser }) {
   const [searchBar, setSearchBar] = useState();
 
   return (
     <>
-      <Header user={user} />
-      <div>
+      <Header user={user} setUser={setUser} home />
+      <main>
         <form>
           <h1>TeaTime</h1>
           <div>
@@ -30,7 +30,7 @@ export default function Home({ handleSubmit, user }) {
             </button>
           </div>
         </form>
-      </div>
+      </main>
       <Footer />
     </>
   );

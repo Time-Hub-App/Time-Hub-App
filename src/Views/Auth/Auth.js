@@ -31,11 +31,14 @@ export default function Auth({ setUser, user }) {
   };
   return (
     <div className="complete">
-      <Header user={user} />
+      <Header user={user} setUser={setUser} auth />
       <h3>{type}</h3>
       <AuthForm
         email={email}
+        type={type}
         setEmail={setEmail}
+        username={username}
+        setUsername={setUsername}
         password={password}
         setPassword={setPassword}
         errorMsg={errorMsg}
