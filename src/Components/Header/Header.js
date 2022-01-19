@@ -13,7 +13,7 @@ export default function Header({ user, setUser, home, auth, userpage }) {
     history.push('/auth');
   };
   const handleUserpage = () => {
-    history.push('/userpage');
+    history.push('/journals');
   };
   const handleLogout = async () => {
     await logout();
