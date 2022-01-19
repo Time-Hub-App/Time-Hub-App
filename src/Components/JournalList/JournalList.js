@@ -4,10 +4,8 @@ import { Link } from 'react-router-dom';
 
 import { fetchJournals } from '../../Services/journals';
 
-
 export default function JournalList() {
   const [journals, setJournals] = useState([]);
-  console.log('hello');
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchJournals();
@@ -18,7 +16,9 @@ export default function JournalList() {
   return (
     <div>
       {journals.map((journal) => (
-        <Link key={journal.id} to={`/${journal.title}`}>{journal.title}</Link>
+        <Link key={journal.id} to={`/${journal.title}`}>
+          {journal.title}
+        </Link>
       ))}
     </div>
   );
