@@ -24,7 +24,6 @@ export default function Journal({ user, setUser }) {
   const formHandler = async (e) => {
     e.preventDefault();
     const journalId = await fetchJournalId(params.journal);
-    console.log(journalId);
 
     await createEntry(text, emotion, journalId.id);
     setText('');
