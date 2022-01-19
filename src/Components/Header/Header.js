@@ -7,6 +7,7 @@ export default function Header() {
     <header>
       <NavLink to="/">Home</NavLink>
       <NavLink to="/auth">Auth</NavLink>
+      <NavLink to={`/userpage`}>Userpage</NavLink>
       <h3 onClick={logout}>LogOut</h3>
     </header>
   );
