@@ -20,8 +20,7 @@ export default function Auth({ setUser, user }) {
       if (type === 'Login') {
         resp = await signInUser(email, password);
       } else {
-        resp = await signupUser(email, username, password);
-
+        resp = await signUpUser(email, username, password);
       }
       history.push(`/`);
 
@@ -58,7 +57,6 @@ export default function Auth({ setUser, user }) {
       >
         Login
       </button>
-
     </div>
   );
 }
