@@ -9,6 +9,7 @@ export default function Auth({ setUser }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
+  const [username, setUsername] = useState('');
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -16,7 +17,7 @@ export default function Auth({ setUser }) {
       if (type === 'Login') {
         resp = await signInUser(email, password);
       } else {
-        resp = await signupUser(email, password);
+        resp = await signupUser(email, username, password);
       }
       setUser(resp);
     } catch {
@@ -24,7 +25,7 @@ export default function Auth({ setUser }) {
     }
   };
   return (
-    <div className="complete"><h3>{type}</h3><AuthForm email={email} setEmail={setEmail} password={password} setPassword={setPassword} errorMsg={errorMsg} handleSubmit={handleSubmit} />
+    <div className="complete"><h3>{type}</h3><AuthForm email={email} type={type} setEmail={setEmail} password={password} setPassword={setPassword} errorMsg={errorMsg} handleSubmit={handleSubmit} />
       <button onClick={() => { setType('Sign Up'); } } className={classNames({ active: type === 'Sign Up' })}>Sign Up</button>
       <button onClick={() => { setType('Login'); } } className={classNames({ active: type === 'Login' })}>Login</button>
             
