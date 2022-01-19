@@ -18,23 +18,22 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <Home user={user} />
+            <Home user={user} setUser={setUser} />
           </Route>
           <Route exact path="/about">
-            <About />
+            <About user={user} setUser={setUser} />
           </Route>
           <Route exact path="/auth">
             <Auth user={user} setUser={setUser} />
           </Route>
           <Route exact path="/add">
-            <AddJournal />
+            <AddJournal user={user} setUser={setUser} />
           </Route>
           <ProctedRoute exact path="/userpage" user={user}>
-            <User user={user} />
+            <User user={user} setUser={setUser} />
           </ProctedRoute>
-          <Route exact path=":username/edit" />
           <Route exact path="/:username/:journal">
-            <Journal />
+            <Journal user={user} setUser={setUser} />
           </Route>
         </Switch>
       </BrowserRouter>
