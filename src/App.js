@@ -5,44 +5,32 @@ import Auth from './Views/Auth/Auth.js';
 import User from './Views/User/User';
 import Journal from './Views/Journal/Journal.js';
 import About from './Views/About/About.js';
-import { useEffect, useState } from 'react';
-import { getUser, logout } from './Services/users';
+import { useState } from 'react';
+import { getUser } from './Services/users';
+import ProctedRoute from './Utils/ProtectedRoute';
 
 function App() {
   const [user, setUser] = useState(getUser());
 
-  useEffect(() => {
-    const session = getUser();
-
-    if (session?.user) setUser(session.user);
-  }, []);
-
-  const logoutUser = async () => {
-    await logout();
-    setUser(null);
-  };
   return (
     <div className="App">
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            {user && (
-              <><Home /><button onClick={logoutUser}>Log out</button></>
-            )}
-            {!user && <Auth setUser={setUser} />}
-          </Route>
-          {/* <Route exact path="/auth">
-            <Auth setUser={setUser} />
-          </Route> */}
-          <Route exact path="/:username">
-            <User />
-          </Route>
-          <Route exact path=":username/edit" />
-          <Route exact path="/:username/:journal">
-            <Journal />
+            <Home user={user} />
           </Route>
           <Route exact path="/about">
             <About />
+          </Route>
+          <Route exact path="/auth">
+            <Auth user={user} setUser={setUser} />
+          </Route>
+          <ProctedRoute exact path="/:username" user={user}>
+            <User user={user} />
+          </ProctedRoute>
+          <Route exact path=":username/edit" />
+          <Route exact path="/:username/:journal">
+            <Journal />
           </Route>
         </Switch>
       </BrowserRouter>

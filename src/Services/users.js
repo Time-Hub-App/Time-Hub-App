@@ -3,7 +3,7 @@ import { client, checkError } from './client.js';
 export function getUser() {
   return client.auth.session();
 }
-  
+
 
 export async function signupUser(email, username, password) {
   const { user, error } = await client.auth.signUp({ email, username, password });
@@ -12,7 +12,7 @@ export async function signupUser(email, username, password) {
   }
   return user;
 }
-  
+
 export async function signInUser(email, password) {
   const { user, error } = await client.auth.signIn({ email, password });
   if (error) {
@@ -20,9 +20,8 @@ export async function signInUser(email, password) {
   }
   return user;
 }
-  
+
 export async function logout() {
   const response = await client.auth.signOut();
   return checkError(response);
 }
-  
