@@ -8,7 +8,7 @@ export default function User({ user, setUser }) {
   return (
     <div>
       <Header user={user} setUser={setUser} userpage />
-      <NavLink to="/add">Create Journal</NavLink>
+      <NavLink to="/journals/new">Create Journal</NavLink>
       <JournalList />
       <Footer />
     </div>
