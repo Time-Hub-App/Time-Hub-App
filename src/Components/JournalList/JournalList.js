@@ -22,14 +22,11 @@ export default function JournalList() {
     setClick(true);
   };
 
-  const updateHandler = () => {};
-
   return (
     <div className="journallist">
       {journals.map((journal) => (
         <div key={journal.id} className="item">
           <h3 onClick={() => deleteHandler(journal.id)}>Delete</h3>
-          <h3 onClick={updateHandler}>Update</h3>
           <Link to={`/journals/${journal.title}`}>{journal.title}</Link>
         </div>
       ))}
