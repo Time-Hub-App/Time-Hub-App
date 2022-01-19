@@ -20,7 +20,7 @@ export default function Auth({ setUser, user }) {
       if (type === 'Login') {
         resp = await signInUser(email, password);
       } else {
-        resp = await signupUser(email, username, password);
+        resp = await signUpUser(email, username, password);
 
       }
       history.push(`/`);
@@ -36,7 +36,10 @@ export default function Auth({ setUser, user }) {
       <h3>{type}</h3>
       <AuthForm
         email={email}
+        type={type}
         setEmail={setEmail}
+        username={username}
+        setUsername={setUsername}
         password={password}
         setPassword={setPassword}
         errorMsg={errorMsg}
