@@ -21,7 +21,6 @@ export default function Auth({ setUser, user }) {
         resp = await signInUser(email, password);
       } else {
         resp = await signUpUser(email, username, password);
-
       }
       history.push(`/`);
 
@@ -32,7 +31,7 @@ export default function Auth({ setUser, user }) {
   };
   return (
     <div className="complete">
-      <Header user={user} />
+      <Header user={user} setUser={setUser} auth />
       <h3>{type}</h3>
       <AuthForm
         email={email}
@@ -61,7 +60,6 @@ export default function Auth({ setUser, user }) {
       >
         Login
       </button>
-
     </div>
   );
 }

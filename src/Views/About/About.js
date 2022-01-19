@@ -1,15 +1,12 @@
 import './About.css';
-// import Header from '../../Components/Header/Header.js';
-// import Footer from '../../Components/Footer/Footer.js';
+import Header from '../../Components/Header/Header.js';
+import Footer from '../../Components/Footer/Footer.js';
 
 export default function About() {
   return (
     <>
-      <h1>
-        {/* <Header /> */}
-        About Us
-        {/* <Footer /> */}
-      </h1>
+      <Header />
+      <h1>About Us</h1>
       <div>
         <h3>Fora Heims</h3>
         <ul>
@@ -45,6 +42,7 @@ export default function About() {
         </ul>
         <p>bio</p>
       </div>
+      <Footer />
     </>
   );
 }

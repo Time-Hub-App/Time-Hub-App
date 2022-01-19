@@ -9,7 +9,8 @@ export default function AddJournal() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try { await createJournal(journal);
+    try {
+      await createJournal(journal);
       alert('Journal created!');
       history.push(`/userpage`);
     } catch {
@@ -17,7 +18,7 @@ export default function AddJournal() {
     }
   };
 
-  const setNew = journal => {
+  const setNew = (journal) => {
     setJournal(journal);
   };
   return (
