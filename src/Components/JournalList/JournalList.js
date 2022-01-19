@@ -7,7 +7,7 @@ import { fetchJournals } from '../../Services/journals';
 
 export default function JournalList() {
   const [journals, setJournals] = useState([]);
-
+  console.log('hello');
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchJournals();
