@@ -10,7 +10,9 @@ export default function Auth({ setUser, user }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
+  const [username, setUsername] = useState('');
   const history = useHistory();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -18,7 +20,8 @@ export default function Auth({ setUser, user }) {
       if (type === 'Login') {
         resp = await signInUser(email, password);
       } else {
-        resp = await signUpUser(email, password);
+        resp = await signupUser(email, username, password);
+
       }
       history.push(`/`);
 
@@ -55,6 +58,7 @@ export default function Auth({ setUser, user }) {
       >
         Login
       </button>
+
     </div>
   );
 }
