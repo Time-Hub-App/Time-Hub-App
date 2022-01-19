@@ -7,7 +7,7 @@ import Journal from './Views/Journal/Journal.js';
 import About from './Views/About/About.js';
 import { useState } from 'react';
 import { getUser } from './Services/users';
-import ProctedRoute from './Utils/ProtectedRoute';
+import ProtectedRoute from './Utils/ProtectedRoute';
 import AddJournal from './Views/AddJournal/AddJournal';
 
 function App() {
@@ -29,9 +29,9 @@ function App() {
           <Route exact path="/journals/new">
             <AddJournal user={user} setUser={setUser} />
           </Route>
-          <ProctedRoute exact path="/journals" user={user}>
+          <ProtectedRoute exact path="/journals" user={user}>
             <User user={user} setUser={setUser} />
-          </ProctedRoute>
+          </ProtectedRoute>
           <Route exact path="/journals/:journal">
             <Journal user={user} setUser={setUser} />
           </Route>

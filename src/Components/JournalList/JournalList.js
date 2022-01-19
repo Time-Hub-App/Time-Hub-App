@@ -16,7 +16,7 @@ export default function JournalList() {
   return (
     <div>
       {journals.map((journal) => (
-        <Link key={journal.id} to={`/${journal.title}`}>
+        <Link key={journal.id} to={`/journals/${journal.title}`}>
           {journal.title}
         </Link>
       ))}
