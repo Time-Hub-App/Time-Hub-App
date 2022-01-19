@@ -1,12 +1,16 @@
 import './User';
 import Header from '../../Components/Header/Header.js';
 import Footer from '../../Components/Footer/Footer.js';
+import AddJournal from '../../Components/AddJournal/AddJournal';
+import JournalList from '../../Components/JournalList/JournalList';
+import { NavLink } from 'react-router-dom';
 
 export default function User() {
   return (
     <div>
       <Header />
-      User
+      <NavLink to="/add">Create Journal</NavLink>
+      <JournalList />
       <Footer />
     </div>
   );

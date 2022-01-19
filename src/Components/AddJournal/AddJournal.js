@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
-import JournalForm from '../../Components/Forms/JournalForm';
+import JournalForm from '../Forms/JournalForm';
 import { createJournal } from '../../Services/journals';
 
 export default function AddJournal() {
@@ -11,7 +11,7 @@ export default function AddJournal() {
     e.preventDefault();
     try { await createJournal(journal);
       alert('Journal created!');
-      history.push(`/journals`);
+      history.push(`/userpage`);
     } catch {
       alert('Oops, something went wrong. Try again!');
     }

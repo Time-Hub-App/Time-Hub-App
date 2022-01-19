@@ -8,6 +8,7 @@ import About from './Views/About/About.js';
 import { useState } from 'react';
 import { getUser } from './Services/users';
 import ProctedRoute from './Utils/ProtectedRoute';
+import AddJournal from './Components/AddJournal/AddJournal';
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -25,7 +26,10 @@ function App() {
           <Route exact path="/auth">
             <Auth user={user} setUser={setUser} />
           </Route>
-          <ProctedRoute exact path="/:username" user={user}>
+          <Route exact path="/add">
+            <AddJournal />
+          </Route>
+          <ProctedRoute exact path="/userpage" user={user}>
             <User user={user} />
           </ProctedRoute>
           <Route exact path=":username/edit" />
