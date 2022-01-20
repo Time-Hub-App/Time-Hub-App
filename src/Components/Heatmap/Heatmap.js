@@ -11,38 +11,38 @@ const today = new Date();
 
 export default function Heatmap() {
 
-  const [entries, setEntries] = useState([]);
+  // const [entries, setEntries] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetchEntries();
-      setEntries(data);
-    };
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const data = await fetchEntries();
+  //     setEntries(data);
+  //   };
+  //   fetchData();
+  // }, []);
 
-  const entryValues = entries.map((entry => {
-    return {
-      date: shiftDate(entry.created_at, 0),
-      count: entries.length,
-      emotion: entry.emotion
-    };
-  }));
+  // const entryValues = entries.map((entry => {
+  //   return {
+  //     date: shiftDate(entry.created_at, 0),
+  //     count: entries.length,
+  //     emotion: entry.emotion
+  //   };
+  // }));
 
-  const randomValues = getRange(365).map(index => {
+  // const randomValues = getRange(365).map(index => {
 
-    return {
-      date: shiftDate(today, -index),
-      count: getRandomInt(1, 3),
-    };
-  });
+  //   return {
+  //     date: shiftDate(today, -index),
+  //     count: getRandomInt(1, 3),
+  //   };
+  // });
 
 
-  console.log(entryValues);
+  // console.log(entryValues);
 
   return (
     <div className="heatmap">
-      <CalendarHeatmap
+      {/* <CalendarHeatmap
         startDate={shiftDate(today, -300)}
         endDate={today}
         values={randomValues}
@@ -68,7 +68,7 @@ export default function Heatmap() {
           alert(`${value.count}`);
         }} />
 
-      <ReactTooltip />
+      <ReactTooltip /> */}
 
     </div>
     
