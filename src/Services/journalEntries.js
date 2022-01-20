@@ -10,12 +10,23 @@ export async function fetchJournalId(title) {
   return checkError(resp);
 }
 
-export async function fetchEntries() {
-  const resp = await client.from('entries').select('*');
+export async function fetchEntries(journal_id) {
+  const resp = await client.from('entries').select('*').match({ journal_id });
   return checkError(resp);
 }
 
 export async function deleteEntry(id) {
   const resp = await client.from('entries').delete().match({ id });
+  return checkError(resp);
+}
+
+
+export async function updateEntry(id, emotion, text) {
+  const resp = await client.from('entries').update({ emotion, text }).eq('id', id);
+  return checkError(resp);
+}
+
+export async function fetchEntriesByDate(created_at) {
+  const resp = await client.from('entries').select('*').match({ created_at });
   return checkError(resp);
 }

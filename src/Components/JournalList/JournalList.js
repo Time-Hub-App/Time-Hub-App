@@ -23,6 +23,7 @@ export default function JournalList() {
   };
 
   return (
+    
     <div className="journallist">
       {journals.map((journal) => (
         <div key={journal.id} className="item">

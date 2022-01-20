@@ -1,41 +1,76 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import CalendarHeatmap from 'react-calendar-heatmap';
 import ReactTooltip from 'react-tooltip';
+// import { useState } from 'react';
 
 import './Heatmap.css';
 
 const today = new Date();
 
-export default function Heatmap() {
-  const randomValues = getRange(365).map(index => {
-    return {
-      date: shiftDate(today, -index),
-      count: getRandomInt(1, 3),
-    };
-  });
+
+export default function Heatmap({ entries }) {
+
+
+
+  // const [entries, setEntries] = useState([]);
+
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const data = await fetchEntries();
+  //     setEntries(data);
+  //   };
+  //   fetchData();
+  // }, []);
+
+  // const entryValues = entries.map((entry => {
+  //   return {
+  //     date: shiftDate(entry.created_at, 0),
+  //     count: entries.length,
+  //     emotion: entry.emotion
+  //   };
+  // }));
+
+  // const randomValues = getRange(365).map(index => {
+
+  //   return {
+  //     date: shiftDate(today, -index),
+  //     count: getRandomInt(1, 3),
+  //   };
+  // });
+
+
+  // console.log(entryValues);
+
+
   return (
-    <div>
-      <h1>react-calendar-heatmap demos</h1>
-      <CalendarHeatmap
-        startDate={shiftDate(today, -365)}
+    <div className="heatmap">
+      {/* <CalendarHeatmap
+        startDate={shiftDate(today, -300)}
         endDate={today}
         values={randomValues}
-        classForValue={value => {
+        classForValue={(value) => {
           if (!value) {
             return 'color-empty';
           }
           return `color-github-${value.count}`;
         }}
-        tooltipDataAttrs={value => {
+        tooltipDataAttrs={(value) => {
           return {
-
+            'data-tip': `${value.date}`,
           };
         }}
-        showWeekdayLabels={true}
-        onClick={value => alert('Clicked')}
+        showWeekdayLabels={false}
+        onClick={(value) => {
+          if (!value) {
+            alert('no value');
+          }
+          alert(`${value.count}`);
+        }}
       />
-      <ReactTooltip />
+
+      <ReactTooltip /> */}
+
     </div>
   );
 }
