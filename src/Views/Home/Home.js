@@ -11,10 +11,10 @@ export default function Home({ handleSubmit, user, setUser }) {
       <Header user={user} setUser={setUser} home />
       <main>
         <form>
-          <h1>TeaTime</h1>
+          <h1>TimeHub</h1>
           <div>
             <h3>How To Use The App!</h3>
-            <p>instructions:</p>
+            <p>Instructions:</p>
           </div>
           <div>
             <input

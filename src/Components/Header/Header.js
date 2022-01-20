@@ -3,11 +3,14 @@ import { logout } from '../../Services/users';
 import { useHistory } from 'react-router-dom';
 import classNames from 'classnames';
 
-export default function Header({ user, setUser, home, auth, userpage }) {
+export default function Header({ user, setUser, home, auth, userpage, about }) {
   const history = useHistory();
 
   const handleHome = () => {
     history.push('/');
+  };
+  const handleAbout = () => {
+    history.push('/about');
   };
   const handleAuth = () => {
     history.push('/auth');
@@ -24,6 +27,9 @@ export default function Header({ user, setUser, home, auth, userpage }) {
     <header>
       <h3 className={classNames({ active: home })} onClick={handleHome}>
         Home
+      </h3>
+      <h3 className={classNames({ active: about })} onClick={handleAbout}>
+        About
       </h3>
       <h3 className={classNames({ active: auth })} onClick={handleAuth}>
         Log In
