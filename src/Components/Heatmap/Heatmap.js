@@ -8,7 +8,7 @@ import './Heatmap.css';
 const today = new Date();
 
 export default function Heatmap() {
-  const randomValues = getRange(365).map(index => {
+  const randomValues = getRange(100).map(index => {
     return {
       date: shiftDate(today, -index),
       count: getRandomInt(1, 3),
