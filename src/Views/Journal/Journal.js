@@ -3,7 +3,12 @@ import Header from '../../Components/Header/Header.js';
 import Footer from '../../Components/Footer/Footer.js';
 import EntryList from '../../Components/EntryList/EntryList';
 import { useState, useEffect } from 'react';
-import { createEntry, fetchEntries, fetchJournalId } from '../../Services/journalEntries';
+import {
+  createEntry,
+  fetchEntries,
+  fetchJournalId,
+  updateEntry,
+} from '../../Services/journalEntries';
 import EntryForm from '../../Components/EntryForm/EntryForm';
 import { useParams } from 'react-router-dom';
 import { updateJournal } from '../../Services/journals';
@@ -11,7 +16,7 @@ import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function Journal({ user, setUser }) {
   const [entries, setEntries] = useState([]);
-  const [emotion, setEmotion] = useState('');
+  const [emotion, setEmotion] = useState('Love');
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(true);
   const [click, setClick] = useState(false);
@@ -45,6 +50,11 @@ export default function Journal({ user, setUser }) {
     history.push(`/journals/${title}`);
   };
 
+  const updateEntryHandler = async (id, emotion, text) => {
+    await updateEntry(id, emotion, text);
+    history.go(0);
+  };
+
   if (loading) return <div>One second... all of your entries are coming!</div>;
 
   return (
@@ -60,7 +70,13 @@ export default function Journal({ user, setUser }) {
         setText={setText}
         formHandler={formHandler}
       />
-      <EntryList entries={entries} setClick={setClick} />
+      <EntryList
+        entries={entries}
+        setClick={setClick}
+        updateEntryHandler={updateEntryHandler}
+        emotion={emotion}
+        text={text}
+      />
       <Footer />
     </div>
   );
