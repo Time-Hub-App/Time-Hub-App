@@ -1,5 +1,64 @@
 body {
+  display: flexbox;
+  font-family: 'MayinsHandRegular';
   font-family: 'UglyTypistRegular';
   font-weight: normal;
   font-style: normal;
 }
+
+h1 {
+  color: #68a9b5;
+}
+
+h2 {
+  color: #11cb5f;
+}
+.timehub-bio {
+  display: flexbox;
+  justify-content: center;
+  color: #727397;
+  font-family: monospace;
+  font-size: 15px;
+  border: black dotted;
+  max-width: 600px;
+  margin: 20px;
+  padding: auto;
+}
+.developers-container {
+  padding: 20px;
+}
+
+.name {
+  color: #727397;
+  background-color: aliceblue;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.developer-bio {
+  width: 50%;
+  float: left;
+  text-align: left;
+  padding: 20px;
+  border: 2px dotted black;
+}
+.developer-bio2 {
+  display: flexbox;
+  flex-wrap: wrap;
+  text-align: right;
+  /* margin-left: 53%; */
+  padding: 20px;
+  border: 2px dotted black;
+}
+
+.bio-text {
+  text-align: center;
+}
+.bio-text2 {
+  text-align: center;
+}
+/* .socialIcons {
+  height: 50px;
+  width: 100px;
+  margin-left: 50%;
+} */

@@ -2,3 +2,13 @@ footer h3:hover {
   cursor: pointer;
   text-decoration: underline;
 }
+
+footer {
+  background-color: #727397;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.footer-link {
+  color: aliceblue;
+}

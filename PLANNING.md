@@ -25,12 +25,11 @@
     - [ ] import Link from react-router-dom if needed
     - [ ] import what's needed from ../../services/
     - [ ] import what's needed from/views/
-  - [ ] /Views
-
-    - [ ] import React, useState, & useEffect from 'react'
+  - [x] /Views
+    - [x] import React, useState, & useEffect from 'react'
     - [ ] import Link from react-router-dom if needed
-    - [ ] import what's needed from ../../services/
-    - [ ] import what's needed from/components/
+    - [x] import what's needed from ../../services/
+    - [x] import what's needed from/components/
 
   - [x] /Components
     - [x] /AuthForm
@@ -75,8 +74,8 @@
       - [x] /assets.js
 
   - /Services (\*things to do w/supabase)
-    - [ ] --
-      - [ ] import checkError, client from './client'
+    - [x] client.js, journalEntries.js, journals.js, users.js
+      - [x] import checkError, client from './client'
 
 - App.js
 
@@ -91,3 +90,5 @@
   - [x] add necessary rules
 
   CRUD - create, read, update, delete
+
+update in supabase > using 
