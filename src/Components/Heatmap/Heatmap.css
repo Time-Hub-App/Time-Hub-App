@@ -3,6 +3,13 @@
   fill: #aaa;
 }
 
+.heatmap {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  margin-left: 20%;
+}
+
 .react-calendar-heatmap .react-calendar-heatmap-small-text {
   font-size: 5px;
 }

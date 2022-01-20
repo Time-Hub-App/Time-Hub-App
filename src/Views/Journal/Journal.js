@@ -8,6 +8,7 @@ import EntryForm from '../../Components/EntryForm/EntryForm';
 import { useParams } from 'react-router-dom';
 import { updateJournal } from '../../Services/journals';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import Heatmap from '../../Components/Heatmap/Heatmap';
 
 export default function Journal({ user, setUser }) {
   const [entries, setEntries] = useState([]);
@@ -51,6 +52,7 @@ export default function Journal({ user, setUser }) {
     <div>
       <Header user={user} setUser={setUser} userpage />
       <h1>{params.journal}</h1>
+      <Heatmap />
       <button onClick={() => updateHandler(newTitle)}>Update</button>
       <input type="text" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} />
       <EntryForm
@@ -60,7 +62,9 @@ export default function Journal({ user, setUser }) {
         setText={setText}
         formHandler={formHandler}
       />
-      <EntryList entries={entries} setClick={setClick} />
+      <div className="entry-hidden">
+        <EntryList entries={entries} setClick={setClick} />
+      </div>
       <Footer />
     </div>
   );

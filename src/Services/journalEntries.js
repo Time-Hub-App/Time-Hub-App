@@ -19,3 +19,8 @@ export async function deleteEntry(id) {
   const resp = await client.from('entries').delete().match({ id });
   return checkError(resp);
 }
+
+export async function fetchEntriesByDate(created_at) {
+  const resp = await client.from('entries').select('*').match({ created_at });
+  return checkError(resp);
+}
