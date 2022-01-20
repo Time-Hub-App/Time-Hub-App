@@ -9,10 +9,10 @@ export async function signUpUser(email, username, password) {
   if (error) {
     throw error;
   }
-  const resp = await client.from('profiles').insert({ username }).single();
-  if (resp.error) {
-    throw error;
-  }
+  // const resp = await client.from('profiles').insert({ username }).single();
+  // if (resp.error) {
+  //   throw error;
+  // }
   return user;
 }
 
