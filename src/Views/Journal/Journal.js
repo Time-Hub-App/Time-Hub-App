@@ -21,13 +21,14 @@ export default function Journal({ user, setUser }) {
 
   useEffect(() => {
     const fetchData = async () => {
-      const resp = await fetchEntries();
+      const journalId = await fetchJournalId(params.journal);
+      const resp = await fetchEntries(journalId.id);
       setEntries(resp);
       setLoading(false);
       setClick(false);
     };
     fetchData();
-  }, [click]);
+  }, [click, params.journal]);
 
   const formHandler = async (e) => {
     e.preventDefault();
