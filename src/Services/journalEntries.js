@@ -14,3 +14,8 @@ export async function fetchEntries() {
   const resp = await client.from('entries').select('*');
   return checkError(resp);
 }
+
+export async function deleteEntry(id) {
+  const resp = await client.from('entries').delete().match({ id });
+  return checkError(resp);
+}
