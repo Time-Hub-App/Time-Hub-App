@@ -1,24 +1,49 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import CalendarHeatmap from 'react-calendar-heatmap';
 import ReactTooltip from 'react-tooltip';
 
 import './Heatmap.css';
 
+import { fetchEntries } from '../../Services/journalEntries';
+
 const today = new Date();
 
 export default function Heatmap() {
-  const randomValues = getRange(365).map((index) => {
-    return {
-      date: shiftDate(today, -index),
-      count: getRandomInt(1, 3),
-    };
-  });
+
+  // const [entries, setEntries] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const data = await fetchEntries();
+  //     setEntries(data);
+  //   };
+  //   fetchData();
+  // }, []);
+
+  // const entryValues = entries.map((entry => {
+  //   return {
+  //     date: shiftDate(entry.created_at, 0),
+  //     count: entries.length,
+  //     emotion: entry.emotion
+  //   };
+  // }));
+
+  // const randomValues = getRange(365).map(index => {
+
+  //   return {
+  //     date: shiftDate(today, -index),
+  //     count: getRandomInt(1, 3),
+  //   };
+  // });
+
+
+  // console.log(entryValues);
+
   return (
-    <div>
-      <h1>react-calendar-heatmap demos</h1>
-      <CalendarHeatmap
-        startDate={shiftDate(today, -365)}
+    <div className="heatmap">
+      {/* <CalendarHeatmap
+        startDate={shiftDate(today, -300)}
         endDate={today}
         values={randomValues}
         classForValue={(value) => {
@@ -26,17 +51,27 @@ export default function Heatmap() {
             return 'color-empty';
           }
           return `color-github-${value.count}`;
-        }}
-        // tooltipDataAttrs={value => {
-        //   return {
 
-        //   };
-        // }}
-        showWeekdayLabels={true}
-        // onClick={value => alert('Clicked')}
-      />
-      <ReactTooltip />
+        } }
+        tooltipDataAttrs={value => {
+          return {
+            'data-tip': `${value.date}`,
+          } ;
+            
+        }
+        } 
+        showWeekdayLabels={false}
+        onClick={value => {
+          if (!value) {
+            alert('no value');
+          }
+          alert(`${value.count}`);
+        }} />
+
+      <ReactTooltip /> */}
+
     </div>
+    
   );
 }
 
@@ -53,6 +88,7 @@ function getRange(count) {
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(<Heatmap />, rootElement);

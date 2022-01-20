@@ -13,6 +13,14 @@ import EntryForm from '../../Components/EntryForm/EntryForm';
 import { useParams } from 'react-router-dom';
 import { updateJournal } from '../../Services/journals';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from '../../Utils/assets';
 
 export default function Journal({ user, setUser }) {
   const [entries, setEntries] = useState([]);
@@ -50,10 +58,13 @@ export default function Journal({ user, setUser }) {
     history.push(`/journals/${title}`);
   };
 
+
   const updateEntryHandler = async (id, emotion, text) => {
     await updateEntry(id, emotion, text);
     history.go(0);
   };
+
+
 
   if (loading) return <div>One second... all of your entries are coming!</div>;
 
@@ -61,6 +72,20 @@ export default function Journal({ user, setUser }) {
     <div>
       <Header user={user} setUser={setUser} userpage />
       <h1>{params.journal}</h1>
+      <ThemeProvider theme={theme}>
+        <Timeline> 
+          {entries.map((entry) => (
+            <TimelineItem key={entry.id}>
+              <TimelineSeparator>
+                <TimelineDot color={entry.emotion || 'grey'} />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent><h5>{entry.emotion}</h5> {entry.created_at}</TimelineContent>
+            </TimelineItem>
+          ))}
+        </Timeline>
+      </ThemeProvider>
+      {/* <Heatmap /> */}
       <button onClick={() => updateHandler(newTitle)}>Update</button>
       <input type="text" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} />
       <EntryForm
@@ -70,6 +95,7 @@ export default function Journal({ user, setUser }) {
         setText={setText}
         formHandler={formHandler}
       />
+
       <EntryList
         entries={entries}
         setClick={setClick}
@@ -77,6 +103,10 @@ export default function Journal({ user, setUser }) {
         emotion={emotion}
         text={text}
       />
+
+      <div className="entry-hidden">
+        <EntryList entries={entries} setClick={setClick} />
+      </div>
       <Footer />
     </div>
   );
