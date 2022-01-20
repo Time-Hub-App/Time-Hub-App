@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { getUser } from './Services/users';
 import ProtectedRoute from './Utils/ProtectedRoute';
 import AddJournal from './Views/AddJournal/AddJournal';
+import Heatmap from './Components/Heatmap/Heatmap';
 
 function App() {
   const [user, setUser] = useState(getUser());
