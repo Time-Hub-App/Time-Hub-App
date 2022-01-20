@@ -1,42 +1,66 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import CalendarHeatmap from 'react-calendar-heatmap';
 import ReactTooltip from 'react-tooltip';
 
 import './Heatmap.css';
 
+import { fetchEntries } from '../../Services/journalEntries';
+
 const today = new Date();
 
 export default function Heatmap() {
+  const [entries, setEntries] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetchEntries();
+      setEntries(data);
+    };
+    fetchData();
+  }, []);
+
+  const entryValues = entries.map((entry => {
+    return {
+      date: shiftDate(entry.created_at, -300),
+      count: entries.length,
+      emotion: entry.emotion
+    };
+  }));
+
   const randomValues = getRange(100).map(index => {
     return {
       date: shiftDate(today, -index),
       count: getRandomInt(1, 3),
     };
   });
+
+  console.log(randomValues);
+  console.log(entryValues);
+
   return (
-    <div>
-      <h1>react-calendar-heatmap demos</h1>
+    <div className="heatmap">
       <CalendarHeatmap
         startDate={shiftDate(today, -365)}
         endDate={today}
-        values={randomValues}
+        values={entryValues}
         classForValue={value => {
           if (!value) {
             return 'color-empty';
           }
           return `color-github-${value.count}`;
-        }}
+        } }
         tooltipDataAttrs={value => {
           return {
-
+            'data-tip': `${value.date}`,
           };
-        }}
+        } }
         showWeekdayLabels={true}
-        onClick={value => alert('Clicked')}
-      />
+        onClick={value => alert(`${value.count}`)} />
       <ReactTooltip />
+
     </div>
+    
   );
 }
 
