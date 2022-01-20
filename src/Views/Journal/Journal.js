@@ -14,7 +14,8 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from '../../Utils/assets';
 
 export default function Journal({ user, setUser }) {
   const [entries, setEntries] = useState([]);
@@ -52,23 +53,26 @@ export default function Journal({ user, setUser }) {
     history.push(`/journals/${title}`);
   };
 
+
   if (loading) return <div>One second... all of your entries are coming!</div>;
 
   return (
     <div>
       <Header user={user} setUser={setUser} userpage />
       <h1>{params.journal}</h1>
-      <Timeline> 
-        {entries.map((entry) => (
-          <TimelineItem key={entry.id}>
-            <TimelineSeparator>
-              <TimelineDot color="primary"/>
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent><h5>{entry.emotion}</h5> {entry.created_at}</TimelineContent>
-          </TimelineItem>
-        ))}
-      </Timeline>
+      <ThemeProvider theme={theme}>
+        <Timeline> 
+          {entries.map((entry) => (
+            <TimelineItem key={entry.id}>
+              <TimelineSeparator>
+                <TimelineDot color={entry.emotion || 'grey'} />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent><h5>{entry.emotion}</h5> {entry.created_at}</TimelineContent>
+            </TimelineItem>
+          ))}
+        </Timeline>
+      </ThemeProvider>
       {/* <Heatmap /> */}
       <button onClick={() => updateHandler(newTitle)}>Update</button>
       <input type="text" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} />
