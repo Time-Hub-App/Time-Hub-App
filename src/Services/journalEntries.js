@@ -10,8 +10,8 @@ export async function fetchJournalId(title) {
   return checkError(resp);
 }
 
-export async function fetchEntries() {
-  const resp = await client.from('entries').select('*');
+export async function fetchEntries(journal_id) {
+  const resp = await client.from('entries').select('*').match({ journal_id });
   return checkError(resp);
 }
 

@@ -10,6 +10,7 @@ import { fetchEntries } from '../../Services/journalEntries';
 const today = new Date();
 
 export default function Heatmap() {
+
   const [entries, setEntries] = useState([]);
 
   useEffect(() => {
@@ -29,6 +30,7 @@ export default function Heatmap() {
   }));
 
   const randomValues = getRange(365).map(index => {
+
     return {
       date: shiftDate(today, -index),
       count: getRandomInt(1, 3),
@@ -44,11 +46,12 @@ export default function Heatmap() {
         startDate={shiftDate(today, -300)}
         endDate={today}
         values={randomValues}
-        classForValue={value => {
+        classForValue={(value) => {
           if (!value) {
             return 'color-empty';
           }
           return `color-github-${value.count}`;
+
         } }
         tooltipDataAttrs={value => {
           return {
@@ -64,6 +67,7 @@ export default function Heatmap() {
           }
           alert(`${value.count}`);
         }} />
+
       <ReactTooltip />
 
     </div>
