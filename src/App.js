@@ -32,9 +32,9 @@ function App() {
           <ProtectedRoute exact path="/journals" user={user}>
             <User user={user} setUser={setUser} />
           </ProtectedRoute>
-          <Route exact path="/journals/:journal">
+          <ProtectedRoute exact path="/journals/:journal" user={user}>
             <Journal user={user} setUser={setUser} />
-          </Route>
+          </ProtectedRoute>
         </Switch>
       </BrowserRouter>
     </div>
