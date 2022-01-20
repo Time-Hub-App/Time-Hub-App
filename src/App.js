@@ -9,7 +9,9 @@ import { useState } from 'react';
 import { getUser } from './Services/users';
 import ProtectedRoute from './Utils/ProtectedRoute';
 import AddJournal from './Views/AddJournal/AddJournal';
-import Heatmap from './Components/Heatmap/Heatmap';
+
+// import Heatmap from './Components/Heatmap/Heatmap';
+
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -36,10 +38,9 @@ function App() {
           <ProtectedRoute exact path="/journals/:journal" user={user}>
             <Journal user={user} setUser={setUser} />
           </ProtectedRoute>
-          <ProtectedRoute exact path="/heatmap" user={user}>
+          {/* <ProtectedRoute exact path="/heatmap" user={user}>
             <Heatmap user={user} setUser={setUser} />
-          </ProtectedRoute>
-
+          </ProtectedRoute> */}
         </Switch>
       </BrowserRouter>
     </div>

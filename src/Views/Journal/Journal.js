@@ -37,8 +37,8 @@ export default function Journal({ user, setUser }) {
       const journalId = await fetchJournalId(params.journal);
       const resp = await fetchEntries(journalId.id);
       setEntries(resp);
-      setLoading(false);
       setClick(false);
+      setLoading(false);
     };
     fetchData();
   }, [click, params.journal]);
@@ -59,19 +59,17 @@ export default function Journal({ user, setUser }) {
   };
 
 
+
   const updateEntryHandler = async (id, emotion, text) => {
     await updateEntry(id, emotion, text);
     history.go(0);
   };
 
 
-
   if (loading) return <div>One second... all of your entries are coming!</div>;
-
   return (
     <div>
       <Header user={user} setUser={setUser} userpage />
-      <h1>{params.journal}</h1>
       <ThemeProvider theme={theme}>
         <Timeline> 
           {entries.map((entry) => (

@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import CalendarHeatmap from 'react-calendar-heatmap';
 import ReactTooltip from 'react-tooltip';
+// import { useState } from 'react';
 
 import './Heatmap.css';
 
-import { fetchEntries } from '../../Services/journalEntries';
-
 const today = new Date();
 
-export default function Heatmap() {
+
+export default function Heatmap({ entries }) {
+
+
 
   // const [entries, setEntries] = useState([]);
+
 
   // useEffect(() => {
   //   const fetchData = async () => {
@@ -40,6 +42,7 @@ export default function Heatmap() {
 
   // console.log(entryValues);
 
+
   return (
     <div className="heatmap">
       {/* <CalendarHeatmap
@@ -51,27 +54,24 @@ export default function Heatmap() {
             return 'color-empty';
           }
           return `color-github-${value.count}`;
-
-        } }
-        tooltipDataAttrs={value => {
+        }}
+        tooltipDataAttrs={(value) => {
           return {
             'data-tip': `${value.date}`,
-          } ;
-            
-        }
-        } 
+          };
+        }}
         showWeekdayLabels={false}
-        onClick={value => {
+        onClick={(value) => {
           if (!value) {
             alert('no value');
           }
           alert(`${value.count}`);
-        }} />
+        }}
+      />
 
       <ReactTooltip /> */}
 
     </div>
-    
   );
 }
 
@@ -88,7 +88,6 @@ function getRange(count) {
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(<Heatmap />, rootElement);
