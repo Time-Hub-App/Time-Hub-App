@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react';
 import { createEntry, fetchEntries, fetchJournalId } from '../../Services/journalEntries';
 import EntryForm from '../../Components/EntryForm/EntryForm';
 import { useParams } from 'react-router-dom';
+import { updateJournal } from '../../Services/journals';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function Journal({ user, setUser }) {
   const [entries, setEntries] = useState([]);
@@ -13,7 +15,9 @@ export default function Journal({ user, setUser }) {
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(true);
   const [click, setClick] = useState(false);
+  const [newTitle, setNewTitle] = useState('');
   const params = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,12 +38,20 @@ export default function Journal({ user, setUser }) {
     setClick(true);
   };
 
+  const updateHandler = async (title) => {
+    const journalId = await fetchJournalId(params.journal);
+    await updateJournal(journalId.id, title);
+    history.push(`/journals/${title}`);
+  };
+
   if (loading) return <div>One second... all of your entries are coming!</div>;
 
   return (
     <div>
       <Header user={user} setUser={setUser} userpage />
       <h1>{params.journal}</h1>
+      <button onClick={() => updateHandler(newTitle)}>Update</button>
+      <input type="text" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} />
       <EntryForm
         emotion={emotion}
         setEmotion={setEmotion}

@@ -10,7 +10,8 @@ export async function fetchJournals() {
   return checkError(resp);
 }
 
-export async function updateJournal({ id, title }) {
+export async function updateJournal(id, title) {
+  // console.log(id, title);
   const resp = await client.from('journals').update({ title }).eq('id', id);
   return checkError(resp);
 }
