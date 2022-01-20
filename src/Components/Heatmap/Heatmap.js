@@ -22,28 +22,28 @@ export default function Heatmap() {
 
   const entryValues = entries.map((entry => {
     return {
-      date: shiftDate(entry.created_at, -300),
+      date: shiftDate(entry.created_at, 0),
       count: entries.length,
       emotion: entry.emotion
     };
   }));
 
-  const randomValues = getRange(100).map(index => {
+  const randomValues = getRange(365).map(index => {
     return {
       date: shiftDate(today, -index),
       count: getRandomInt(1, 3),
     };
   });
 
-  console.log(randomValues);
+
   console.log(entryValues);
 
   return (
     <div className="heatmap">
       <CalendarHeatmap
-        startDate={shiftDate(today, -365)}
+        startDate={shiftDate(today, -300)}
         endDate={today}
-        values={entryValues}
+        values={randomValues}
         classForValue={value => {
           if (!value) {
             return 'color-empty';
@@ -53,10 +53,17 @@ export default function Heatmap() {
         tooltipDataAttrs={value => {
           return {
             'data-tip': `${value.date}`,
-          };
-        } }
-        showWeekdayLabels={true}
-        onClick={value => alert(`${value.count}`)} />
+          } ;
+            
+        }
+        } 
+        showWeekdayLabels={false}
+        onClick={value => {
+          if (!value) {
+            alert('no value');
+          }
+          alert(`${value.count}`);
+        }} />
       <ReactTooltip />
 
     </div>
@@ -77,6 +84,7 @@ function getRange(count) {
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(<Heatmap />, rootElement);
