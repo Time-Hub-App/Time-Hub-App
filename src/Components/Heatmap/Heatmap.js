@@ -8,7 +8,7 @@ import './Heatmap.css';
 const today = new Date();
 
 export default function Heatmap() {
-  const randomValues = getRange(365).map(index => {
+  const randomValues = getRange(365).map((index) => {
     return {
       date: shiftDate(today, -index),
       count: getRandomInt(1, 3),
@@ -21,19 +21,19 @@ export default function Heatmap() {
         startDate={shiftDate(today, -365)}
         endDate={today}
         values={randomValues}
-        classForValue={value => {
+        classForValue={(value) => {
           if (!value) {
             return 'color-empty';
           }
           return `color-github-${value.count}`;
         }}
-        tooltipDataAttrs={value => {
-          return {
+        // tooltipDataAttrs={value => {
+        //   return {
 
-          };
-        }}
+        //   };
+        // }}
         showWeekdayLabels={true}
-        onClick={value => alert('Clicked')}
+        // onClick={value => alert('Clicked')}
       />
       <ReactTooltip />
     </div>
