@@ -8,7 +8,13 @@ import EntryForm from '../../Components/EntryForm/EntryForm';
 import { useParams } from 'react-router-dom';
 import { updateJournal } from '../../Services/journals';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
-import Heatmap from '../../Components/Heatmap/Heatmap';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+
 
 export default function Journal({ user, setUser }) {
   const [entries, setEntries] = useState([]);
@@ -52,7 +58,18 @@ export default function Journal({ user, setUser }) {
     <div>
       <Header user={user} setUser={setUser} userpage />
       <h1>{params.journal}</h1>
-      <Heatmap />
+      <Timeline> 
+        {entries.map((entry) => (
+          <TimelineItem key={entry.id}>
+            <TimelineSeparator>
+              <TimelineDot color="primary"/>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent><h5>{entry.emotion}</h5> {entry.created_at}</TimelineContent>
+          </TimelineItem>
+        ))}
+      </Timeline>
+      {/* <Heatmap /> */}
       <button onClick={() => updateHandler(newTitle)}>Update</button>
       <input type="text" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} />
       <EntryForm
