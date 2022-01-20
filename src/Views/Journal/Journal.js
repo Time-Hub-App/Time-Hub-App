@@ -25,8 +25,8 @@ export default function Journal({ user, setUser }) {
       const journalId = await fetchJournalId(params.journal);
       const resp = await fetchEntries(journalId.id);
       setEntries(resp);
-      setLoading(false);
       setClick(false);
+      setLoading(false);
     };
     fetchData();
   }, [click, params.journal]);
@@ -46,13 +46,13 @@ export default function Journal({ user, setUser }) {
     history.push(`/journals/${title}`);
   };
 
+  // console.log(entries);
   if (loading) return <div>One second... all of your entries are coming!</div>;
-
   return (
     <div>
       <Header user={user} setUser={setUser} userpage />
       <h1>{params.journal}</h1>
-      <Heatmap />
+      <Heatmap entries={entries} />
       <button onClick={() => updateHandler(newTitle)}>Update</button>
       <input type="text" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} />
       <EntryForm
