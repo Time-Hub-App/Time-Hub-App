@@ -8,13 +8,17 @@ export default function Home({ user, setUser }) {
     <>
       <Header user={user} setUser={setUser} home />
       <main>
-        <form>
-          <img src={logo} />
-          <div>
-            <h3>How To Use The App!</h3>
-            <p>Instructions:</p>
-          </div>
-        </form>
+        <img src={logo} />
+        <p>
+          Journaling is a very underrated activity that boosts your well-being in just a few minutes
+          a day!
+        </p>
+        <p>
+          A paper notebook and pen are fine for journaling, but TimeHub offers more! Jot your
+          thoughts down or record what happened during the day for a simple way to manage stress,
+          enhance creativity, increase happiness, and track your emotions.
+        </p>
+        <p>Click Log In to Sign up, or click Journals to start a new Journal</p>
       </main>
       <Footer />
     </>

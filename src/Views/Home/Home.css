@@ -5,3 +5,8 @@ body {
   background-position: fixed;
   min-height: 100vw;
 }
+
+main p {
+  font-family: cursive;
+  padding: 10px 40px;
+}

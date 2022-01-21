@@ -3,18 +3,18 @@ import Header from '../../Components/Header/Header.js';
 import Footer from '../../Components/Footer/Footer.js';
 import logo from '../../images/TIMEHUB_LOGO.png';
 
-export default function About() {
+export default function About({ user, setUser }) {
   return (
     <>
-      <Header />
+      <Header user={user} setUser={setUser} />
       <img src={logo} height="350px" />
       <div className="timehub-bio">
         <span>
-          Journaling is a very underrated activity that boosts your well-being in just a few minutes
-          a day!
-          <br />A paper notebook and pen are fine for journaling, but TimeHub offers more! Jot your
-          thoughts down or record what happened during the day for a simple way to manage stress,
-          enhance creativity, increase happiness, and track your emotions.
+          Why are we doing what we are doing in the first place? Recognizing your emotions is one of
+          the most important skills you can have.
+          <br />
+          People who are good at noticing how they feel are more likely to be able calm themselves
+          down and/or adjust their behavior.
         </span>
       </div>
       <div>
@@ -28,7 +28,7 @@ export default function About() {
             <a href="https://github.com/fora-heims">GitHub</a>
           </ul>
           <div>
-            <p className="bio-text">Fora is a web developer in the Portland, Or area.</p>
+            <p className="bio-text">Fora is a web developer in the Portland, OR area.</p>
           </div>
         </div>
         <div className="developer-bio">
