@@ -1,0 +1,15 @@
+form input[type='submit'],
+form select {
+  background-color: transparent;
+  margin: 10px;
+}
+
+form select {
+  padding: 8px;
+  border-radius: 5px;
+  border: #727397 3px solid;
+}
+
+input {
+  margin: 10px;
+}

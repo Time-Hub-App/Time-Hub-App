@@ -1,5 +1,6 @@
 import React from 'react';
 import EmotionWheel from '../EmotionWheel/EmotionWheel';
+import './EntryForm.css';
 
 export default function EntryForm({ emotion, setEmotion, text, setText, formHandler }) {
   return (
