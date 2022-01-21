@@ -58,27 +58,26 @@ export default function Journal({ user, setUser }) {
     history.push(`/journals/${title}`);
   };
 
-
-
   const updateEntryHandler = async (id, emotion, text) => {
     await updateEntry(id, emotion, text);
     history.go(0);
   };
-
 
   if (loading) return <div>One second... all of your entries are coming!</div>;
   return (
     <div>
       <Header user={user} setUser={setUser} userpage />
       <ThemeProvider theme={theme}>
-        <Timeline> 
+        <Timeline>
           {entries.map((entry) => (
             <TimelineItem key={entry.id}>
               <TimelineSeparator>
                 <TimelineDot color={entry.emotion || 'grey'} />
                 <TimelineConnector />
               </TimelineSeparator>
-              <TimelineContent><h5>{entry.emotion}</h5> {entry.created_at}</TimelineContent>
+              <TimelineContent>
+                <h5>{entry.emotion}</h5> {entry.created_at}
+              </TimelineContent>
             </TimelineItem>
           ))}
         </Timeline>
@@ -101,10 +100,6 @@ export default function Journal({ user, setUser }) {
         emotion={emotion}
         text={text}
       />
-
-      <div className="entry-hidden">
-        <EntryList entries={entries} setClick={setClick} />
-      </div>
       <Footer />
     </div>
   );

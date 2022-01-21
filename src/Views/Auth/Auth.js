@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import AuthForm from '../../Components/AuthForm/AuthForm';
 import Header from '../../Components/Header/Header';
+import Footer from '../../Components/Footer/Footer';
 import { signInUser, signUpUser } from '../../Services/users';
+import './Auth.css';
 
 export default function Auth({ setUser, user }) {
   const [type, setType] = useState('Login');
@@ -60,6 +62,7 @@ export default function Auth({ setUser, user }) {
       >
         Login
       </button>
+      <Footer />
     </div>
   );
 }

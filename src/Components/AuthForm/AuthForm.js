@@ -1,11 +1,10 @@
 import React from 'react';
+import './AuthForm.css';
 
 export default function AuthForm({
   type,
   email,
   setEmail,
-  // username,
-  // setUsername,
   password,
   setPassword,
   handleSubmit,
@@ -17,8 +16,6 @@ export default function AuthForm({
         <>
           <label>Email: </label>
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-          {/* <label>Username:</label>
-          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} /> */}
           <label>Password: </label>
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </>
@@ -32,7 +29,7 @@ export default function AuthForm({
       )}
 
       <p>{errorMsg}</p>
-      <input type="submit" />
+      <button type="submit">submit</button>
     </form>
   );
 }

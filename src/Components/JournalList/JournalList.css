@@ -5,12 +5,24 @@
   justify-content: center;
   gap: 20px;
   padding: 20px;
+  font-weight: bold;
+}
+
+.delete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .item {
-  width: stretch;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: stretch;
+  font-weight: bold;
+  border: solid black 2px;
 }
 
 .item h3 {
