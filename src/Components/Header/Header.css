@@ -5,7 +5,6 @@ header h3:hover {
 
 header {
   background-color: #727397;
-  /* color: #4c4345; */
   color: aliceblue;
   display: flex;
   align-items: center;
