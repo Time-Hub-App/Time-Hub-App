@@ -6,24 +6,30 @@ body {
   font-style: normal;
 }
 
+img {
+}
+
 h2 {
   color: #727397;
 }
+
 .timehub-bio {
-  display: flexbox;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   color: #727397;
   font-family: monospace;
   font-size: 15px;
-  border: black dotted;
-  max-width: 600px;
   margin: 20px;
-  padding: auto;
+  padding: 20px 10vw;
 }
 .developers-container {
   padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .name {
@@ -34,19 +40,20 @@ h2 {
 }
 
 .developer-bio {
-  width: 50%;
-  float: left;
-  text-align: left;
+  width: 36vw;
+  text-align: right;
   padding: 20px;
-  /* border: 2px dotted black; */
+  margin: 10px;
+  color: #727397;
+  font-family: monospace;
 }
 .developer-bio2 {
-  display: flexbox;
-  flex-wrap: wrap;
+  width: 36vw;
   text-align: right;
-  /* margin-left: 53%; */
+  margin: 10px;
   padding: 20px;
-  /* border: 2px dotted black; */
+  color: #727397;
+  font-family: monospace;
 }
 
 .bio-text {
@@ -55,8 +62,8 @@ h2 {
 .bio-text2 {
   text-align: center;
 }
-/* .socialIcons {
-  height: 50px;
-  width: 100px;
-  margin-left: 50%;
-} */
+
+ul {
+  display: flex;
+  flex-direction: column;
+}

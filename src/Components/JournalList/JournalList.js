@@ -1,12 +1,13 @@
 import './JournalList.css';
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 import { deleteJournal, fetchJournals } from '../../Services/journals';
+import { useHistory } from 'react-router-dom';
 
 export default function JournalList() {
   const [journals, setJournals] = useState([]);
   const [click, setClick] = useState(false);
+  const history = useHistory();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,11 +27,11 @@ export default function JournalList() {
     <div className="journallist">
       {journals.map((journal) => (
         <div key={journal.id} className="item">
+          <div className="links">
+            <h2 onClick={() => history.push(`/journals/${journal.title}`)}>{journal.title}</h2>
+          </div>
           <div className="delete">
             <h3 onClick={() => deleteHandler(journal.id)}>Delete</h3>
-          </div>
-          <div className="links">
-            <Link to={`/journals/${journal.title}`}>{journal.title}</Link>
           </div>
         </div>
       ))}

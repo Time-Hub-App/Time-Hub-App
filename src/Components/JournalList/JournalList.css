@@ -13,16 +13,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: black solid 2px;
+  border-radius: 10px;
 }
 
 .item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: stretch;
   font-weight: bold;
-  border: solid black 2px;
 }
 
 .item h3 {
@@ -30,6 +31,15 @@
 }
 
 .item h3:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.item h2 {
+  margin: 10px 10px;
+  color: black;
+}
+
+.item h2:hover {
   cursor: pointer;
   text-decoration: underline;
 }

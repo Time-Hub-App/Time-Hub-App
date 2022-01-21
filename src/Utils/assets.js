@@ -110,13 +110,13 @@ import { createTheme } from '@mui/material/styles';
 export const theme = createTheme({
   palette: {
     Love: {
-      main: '#421979',
+      main: '#F5EF8D',
     },
     Joy: {
-      main: '#f50057',
+      main: '#B8E19B',
     },
     Surprise: {
-      main: '#421979',
+      main: '#B0E4E2',
     },
     Sadness: {
       main: '#B3BCE3',
