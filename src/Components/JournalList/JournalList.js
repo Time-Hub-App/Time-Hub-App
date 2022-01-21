@@ -23,12 +23,15 @@ export default function JournalList() {
   };
 
   return (
-    
     <div className="journallist">
       {journals.map((journal) => (
         <div key={journal.id} className="item">
-          <h3 onClick={() => deleteHandler(journal.id)}>Delete</h3>
-          <Link to={`/journals/${journal.title}`}>{journal.title}</Link>
+          <div className="delete">
+            <h3 onClick={() => deleteHandler(journal.id)}>Delete</h3>
+          </div>
+          <div className="links">
+            <Link to={`/journals/${journal.title}`}>{journal.title}</Link>
+          </div>
         </div>
       ))}
     </div>

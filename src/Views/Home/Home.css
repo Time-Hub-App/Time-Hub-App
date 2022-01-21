@@ -1,3 +1,6 @@
-main {
-  background-color: #95a9c6;
+body {
+  background-image: url(https://www.ppt-backgrounds.net/thumbs/light-blue-clipart-background.jpeg);
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
 }

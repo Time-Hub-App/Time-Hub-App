@@ -6,16 +6,14 @@ body {
   font-style: normal;
 }
 
-h1 {
-  color: #68a9b5;
-}
-
 h2 {
-  color: #11cb5f;
+  color: #727397;
 }
 .timehub-bio {
   display: flexbox;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
   color: #727397;
   font-family: monospace;
   font-size: 15px;
@@ -40,7 +38,7 @@ h2 {
   float: left;
   text-align: left;
   padding: 20px;
-  border: 2px dotted black;
+  /* border: 2px dotted black; */
 }
 .developer-bio2 {
   display: flexbox;
@@ -48,7 +46,7 @@ h2 {
   text-align: right;
   /* margin-left: 53%; */
   padding: 20px;
-  border: 2px dotted black;
+  /* border: 2px dotted black; */
 }
 
 .bio-text {
