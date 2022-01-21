@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a header 1`] = `
+<div>
+  <form
+    class="form"
+  >
+    <label>
+      Email: 
+    </label>
+    <input
+      type="email"
+      value=""
+    />
+    <label>
+      Password: 
+    </label>
+    <input
+      type="password"
+      value=""
+    />
+    <p />
+    <input
+      type="submit"
+    />
+  </form>
+</div>
+`;

@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a header 1`] = `
+<div>
+  <div
+    class="complete"
+  >
+    <header>
+      <h3
+        class=""
+      >
+        Home
+      </h3>
+      <h3
+        class=""
+      >
+        About
+      </h3>
+      <h3
+        class="active"
+      >
+        Log In
+      </h3>
+      <h3
+        class=""
+      >
+        Journals
+      </h3>
+    </header>
+    <h3>
+      Login
+    </h3>
+    <form
+      class="form"
+    >
+      <label>
+        Email: 
+      </label>
+      <input
+        type="email"
+        value=""
+      />
+      <label>
+        Password: 
+      </label>
+      <input
+        type="password"
+        value=""
+      />
+      <p />
+      <input
+        type="submit"
+      />
+    </form>
+    <button
+      class=""
+    >
+      Sign Up
+    </button>
+    <button
+      class="active"
+    >
+      Login
+    </button>
+  </div>
+</div>
+`;
+
+exports[`should render auth view component 1`] = `
+<div>
+  <div
+    class="complete"
+  >
+    <header>
+      <h3
+        class=""
+      >
+        Home
+      </h3>
+      <h3
+        class=""
+      >
+        About
+      </h3>
+      <h3
+        class="active"
+      >
+        Log In
+      </h3>
+      <h3
+        class=""
+      >
+        Journals
+      </h3>
+    </header>
+    <h3>
+      Login
+    </h3>
+    <form
+      class="form"
+    >
+      <label>
+        Email: 
+      </label>
+      <input
+        type="email"
+        value=""
+      />
+      <label>
+        Password: 
+      </label>
+      <input
+        type="password"
+        value=""
+      />
+      <p />
+      <input
+        type="submit"
+      />
+    </form>
+    <button
+      class=""
+    >
+      Sign Up
+    </button>
+    <button
+      class="active"
+    >
+      Login
+    </button>
+  </div>
+</div>
+`;

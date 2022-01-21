@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a home view 1`] = `
+<div>
+  <header>
+    <h3
+      class="active"
+    >
+      Home
+    </h3>
+    <h3
+      class=""
+    >
+      About
+    </h3>
+    <h3
+      class=""
+    >
+      Log In
+    </h3>
+    <h3
+      class=""
+    >
+      Journals
+    </h3>
+  </header>
+  <main>
+    <form>
+      <h1>
+        TimeHub
+      </h1>
+      <div>
+        <h3>
+          How To Use The App!
+        </h3>
+        <p>
+          Instructions:
+        </p>
+      </div>
+      <div>
+        <input
+          class="searchBar"
+          type="search"
+          value=""
+        />
+      </div>
+      <div>
+        <button
+          class="save"
+        >
+          Save
+        </button>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <a
+      class="footer-link"
+      href="/https://github.com/Time-Hub-App"
+    >
+      TimeHub GitHub
+    </a>
+  </footer>
+</div>
+`;
+
+exports[`should render a home view component 1`] = `
+<div>
+  <header>
+    <h3
+      class="active"
+    >
+      Home
+    </h3>
+    <h3
+      class=""
+    >
+      About
+    </h3>
+    <h3
+      class=""
+    >
+      Log In
+    </h3>
+    <h3
+      class=""
+    >
+      Journals
+    </h3>
+  </header>
+  <main>
+    <form>
+      <h1>
+        TimeHub
+      </h1>
+      <div>
+        <h3>
+          How To Use The App!
+        </h3>
+        <p>
+          Instructions:
+        </p>
+      </div>
+      <div>
+        <input
+          class="searchBar"
+          type="search"
+          value=""
+        />
+      </div>
+      <div>
+        <button
+          class="save"
+        >
+          Save
+        </button>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <a
+      class="footer-link"
+      href="/https://github.com/Time-Hub-App"
+    >
+      TimeHub GitHub
+    </a>
+  </footer>
+</div>
+`;
