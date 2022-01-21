@@ -3,3 +3,7 @@
   text-decoration: underline;
   color: #727397;
 }
+
+.create-journal:hover {
+  cursor: pointer;
+}

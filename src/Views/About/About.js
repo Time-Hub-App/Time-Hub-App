@@ -1,7 +1,7 @@
 import './About.css';
 import Header from '../../Components/Header/Header.js';
 import Footer from '../../Components/Footer/Footer.js';
-import { Link } from 'react-router-dom';
+
 export default function About() {
   return (
     <>
@@ -24,43 +24,25 @@ export default function About() {
           <h3 className="name">Fora Heims, Full Stack Software Developer</h3>
           <ul>
             <div>
-              <Link to="https://www.linkedin.com/in/fora-heims/">
-                LinkedIn
-                {/* <img src="/images/linkedinLogo.png" className="socialIcons" alt="GitHub Logo" /> */}
-              </Link>
+              <a href="https://www.linkedin.com/in/fora-heims/">LinkedIn</a>
             </div>
             <div>
-              <Link to="https://github.com/fora-heims">
-                GitHub
-                {/* <img src="/images/githubLogo.png" className="socialIcons" alt="GitHub Logo" /> */}
-              </Link>
-              {/* <p>Github @fora-heims</p> */}
+              <a href="https://github.com/fora-heims">GitHub</a>
             </div>
           </ul>
           <div>
-            <p className="bio-text">
-              Fora is a dedicated, efficient and strategic developer. Because of their strong
-              foundation of software related knowledge, Fora can produce productive, long-lasting,
-              and clean code.{' '}
-            </p>
+            <p className="bio-text">Fora is a web developer in the Portland, Or area.</p>
           </div>
         </div>
         <div className="developer-bio">
           <h3 className="name">Libbi Dunham, Full Stack Software Developer</h3>
           <ul>
             <div>
-              <Link to="https://www.linkedin.com/in/libbi-dunham/">
-                LinkedIn
-                {/* <img src="/images/linkedinLogo.png" className="socialIcons" alt="GitHub Logo" /> */}
-              </Link>
+              <a href="https://www.linkedin.com/in/libbi-dunham/">LinkedIn</a>
             </div>
             <div>
-              <Link to="https://github.com/Libbi-Dunham">
-                GitHub
-                {/* <img src="/images/githubLogo.png" className="socialIcons" alt="GitHub Logo" /> */}
-              </Link>
+              <a href="https://github.com/Libbi-Dunham">GitHub</a>
             </div>
-            {/* <p>Github: Libbi-Dunham</p> */}
           </ul>
           <p className="bio-text">
             Libbi is a detailed oriented developer with critical thinking skills who is switching
@@ -72,18 +54,11 @@ export default function About() {
           <h3 className="name">Ckay Natividad, Full Stack Software Developer</h3>
           <ul>
             <div>
-              <Link to="https://www.linkedin.com/in/ckaynatividad/">
-                LinkedIn
-                {/* <img src="/images/linkedinLogo.png" className="socialIcons" alt="GitHub Logo" /> */}
-              </Link>
+              <a href="https://www.linkedin.com/in/ckaynatividad/">LinkedIn</a>
             </div>
             <div>
-              <Link to="https://github.com/ckaynatividad">
-                GitHub
-                {/* <img src="/images/githubLogo.png" className="socialIcons" alt="GitHub Logo" /> */}
-              </Link>
+              <a href="https://github.com/ckaynatividad">GitHub</a>
             </div>
-            {/* <p>Github: ckaynatividad</p> */}
           </ul>
           <p className="bio-text2">
             Ckay is a passionate developer with a versatile background ranging from visual arts to
@@ -94,18 +69,11 @@ export default function About() {
           <h3 className="name">Abriel Cleaver, Full Stack Software Developer</h3>
           <ul>
             <div>
-              <Link to="https://www.linkedin.com/in/abrielcleaver/">
-                LinkedIn
-                {/* <img src="/images/linkedinLogo.png" className="socialIcons" alt="GitHub Logo" /> */}
-              </Link>
+              <a href="https://www.linkedin.com/in/abrielcleaver/">LinkedIn</a>
             </div>
             <div>
-              <Link to="https://github.com/abrielcleaver">
-                GitHub
-                {/* <img src="/images/githubLogo.png" className="socialIcons" alt="GitHub Logo" /> */}
-              </Link>
+              <a href="https://github.com/abrielcleaver">GitHub</a>
             </div>
-            {/* <p>Github: abrielcleaver</p> */}
           </ul>
           <p className="bio-text2">
             Abriel is a multifaceted developer with a background in Mental Health & Wellness,
