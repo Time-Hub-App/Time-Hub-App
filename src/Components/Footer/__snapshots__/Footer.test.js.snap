@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a footer 1`] = `
+<div>
+  <footer>
+    <a
+      class="footer-link"
+      href="/https://github.com/Time-Hub-App"
+    >
+      TimeHub GitHub
+    </a>
+  </footer>
+</div>
+`;

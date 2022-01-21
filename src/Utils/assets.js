@@ -109,8 +109,8 @@ export const emotionList = [
 import { createTheme } from '@mui/material/styles';
 export const theme = createTheme({
   palette: {
-    love: {
-      main: '#421979'
+    Love: {
+      main: '#421979',
     },
     Joy: {
       main: '#f50057',
@@ -423,6 +423,6 @@ export const theme = createTheme({
     },
     Frightened: {
       main: '',
-    }
-  }
+    },
+  },
 });

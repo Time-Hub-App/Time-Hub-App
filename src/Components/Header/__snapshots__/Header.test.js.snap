@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a header 1`] = `
+<div>
+  <header>
+    <h3
+      class=""
+    >
+      Home
+    </h3>
+    <h3
+      class=""
+    >
+      About
+    </h3>
+    <h3
+      class=""
+    >
+      Log In
+    </h3>
+    <h3
+      class=""
+    >
+      Journals
+    </h3>
+  </header>
+</div>
+`;
