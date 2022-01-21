@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`entry list render 1`] = `
+<div>
+  <div
+    class="entrylist"
+  >
+    <div
+      class="entry"
+    >
+      <p>
+        meowmeow
+      </p>
+      <p>
+        Joy
+      </p>
+      <h3>
+        Delete Entry
+      </h3>
+      <h3>
+        Update Entry
+      </h3>
+    </div>
+  </div>
+</div>
+`;
