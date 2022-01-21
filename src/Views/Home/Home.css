@@ -1,6 +1,7 @@
 body {
   background-image: url(https://www.ppt-backgrounds.net/thumbs/light-blue-clipart-background.jpeg);
   background-size: cover;
-  height: 100vh;
   background-repeat: no-repeat;
+  background-position: fixed;
+  min-height: 100vw;
 }
