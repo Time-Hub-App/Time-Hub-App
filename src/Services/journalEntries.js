@@ -24,8 +24,3 @@ export async function updateEntry(id, emotion, text) {
   const resp = await client.from('entries').update({ emotion, text }).eq('id', id);
   return checkError(resp);
 }
-
-// export async function fetchEntriesByDate(created_at) {
-//   const resp = await client.from('entries').select('*').match({ created_at });
-//   return checkError(resp);
-// }

@@ -12,7 +12,6 @@ export default function Auth({ setUser, user }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
-  const [username, setUsername] = useState('');
   const history = useHistory();
 
   const handleSubmit = async (e) => {
@@ -22,7 +21,7 @@ export default function Auth({ setUser, user }) {
       if (type === 'Login') {
         resp = await signInUser(email, password);
       } else {
-        resp = await signUpUser(email, username, password);
+        resp = await signUpUser(email, password);
       }
       history.push(`/`);
 
@@ -39,8 +38,6 @@ export default function Auth({ setUser, user }) {
         email={email}
         type={type}
         setEmail={setEmail}
-        username={username}
-        setUsername={setUsername}
         password={password}
         setPassword={setPassword}
         errorMsg={errorMsg}
