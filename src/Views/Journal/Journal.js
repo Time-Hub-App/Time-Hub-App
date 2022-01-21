@@ -83,7 +83,6 @@ export default function Journal({ user, setUser }) {
           ))}
         </Timeline>
       </ThemeProvider>
-      {/* <Heatmap /> */}
       <button onClick={() => updateHandler(newTitle)}>Update</button>
       <input type="text" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} />
       <EntryForm

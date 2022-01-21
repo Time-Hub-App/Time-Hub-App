@@ -38,9 +38,6 @@ function App() {
           <ProtectedRoute exact path="/journals/:journal" user={user}>
             <Journal user={user} setUser={setUser} />
           </ProtectedRoute>
-          {/* <ProtectedRoute exact path="/heatmap" user={user}>
-            <Heatmap user={user} setUser={setUser} />
-          </ProtectedRoute> */}
         </Switch>
       </BrowserRouter>
     </div>
