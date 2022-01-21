@@ -1,5 +1,4 @@
 import React from 'react';
-import './EmotionWheel.css';
 import { emotionList } from '../../Utils/assets';
 
 export default function EmotionWheel({ emotion, setEmotion }) {
