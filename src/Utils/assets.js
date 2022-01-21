@@ -119,310 +119,310 @@ export const theme = createTheme({
       main: '#421979',
     },
     Sadness: {
-      main: '',
+      main: '#B3BCE3',
     },
     Anger: {
-      main: '',
+      main: '#F48FB7',
     },
     Fear: {
-      main: '',
+      main: '#FEB193',
     },
     Peaceful: {
-      main: '',
+      main: '#FDD0A7',
     },
     Tenderness: {
-      main: '',
+      main: '#FEE0A0',
     },
     Desire: {
-      main: '',
+      main: '#FDF5A0',
     },
     Longing: {
-      main: '',
+      main: '#FFF6B1',
     },
     Affectionate: {
-      main: '',
+      main: '#FCF7BF',
     },
     Enthralled: {
-      main: '',
+      main: '#F5F7C6',
     },
     Elation: {
-      main: '',
+      main: '#F2F4C3',
     },
     Enthusiastic: {
-      main: '',
+      main: '#E3F0B8',
     },
     Optimistic: {
-      main: '',
+      main: '#E0EEB0',
     },
     Proud: {
-      main: '',
+      main: '#D5E9AA',
     },
     Cheerful: {
-      main: '',
+      main: '#CBE8B0',
     },
     Happy: {
-      main: '',
+      main: '#BCE2AF',
     },
     Content: {
-      main: '',
+      main: '#BDE4B8',
     },
     Moved: {
-      main: '',
+      main: '#BBE5D1',
     },
     Overcome: {
-      main: '',
+      main: '#B9E6D2',
     },
     Amazed: {
-      main: '',
+      main: '#CDEDE8',
     },
     Confused: {
-      main: '',
+      main: '#CEE8E5',
     },
     Stunned: {
-      main: '',
+      main: '#C4EAED',
     },
     Despair: {
-      main: '',
+      main: '#C6E5E8',
     },
     Neglected: {
-      main: '',
+      main: '#CAE2EE',
     },
     Shameful: {
-      main: '',
+      main: '#C5D6EA',
     },
     Disappointed: {
-      main: '',
+      main: '#C0C5E3',
     },
     Suffering: {
-      main: '',
+      main: '#C2B8DA',
     },
     Disgust: {
-      main: '',
+      main: '#C8A3C5',
     },
     Envy: {
-      main: '',
+      main: '#D8A4CB',
     },
     Irritable: {
-      main: '',
+      main: '#E7A2CE',
     },
     Exasperated: {
-      main: '',
+      main: '#EF9EC7',
     },
     Rage: {
-      main: '',
+      main: '#F69BC4',
     },
     Horror: {
-      main: '',
+      main: '#FCA1B3',
     },
     Nervous: {
-      main: '',
+      main: '#FEA2A7',
     },
     Insecure: {
-      main: '',
+      main: '#FEA3A2',
     },
     Terror: {
-      main: '',
+      main: '#FEAEA5',
     },
     Scared: {
-      main: '',
+      main: '#FFBBA4',
     },
     Satisfied: {
-      main: '',
+      main: '#FDD0A7',
     },
     Relieved: {
-      main: '',
+      main: '#FEC89A',
     },
     Compassionate: {
-      main: '',
+      main: '#FEE0A0',
     },
     Caring: {
-      main: '',
+      main: '#FED992',
     },
     Infatuation: {
-      main: '',
+      main: '#FDF5A0',
     },
     Passion: {
-      main: '',
+      main: '#FDEE8F',
     },
     Attracted: {
-      main: '',
+      main: '#FFF6B1',
     },
     Sentimental: {
-      main: '',
+      main: '#FBF49C',
     },
     Fondness: {
-      main: '',
+      main: '#FCF7BF',
     },
     Romantic: {
-      main: '',
+      main: '#FCF4AC',
     },
     Rapture: {
-      main: '',
+      main: '#F5F7C6',
     },
     Enchanted: {
-      main: '',
+      main: '#ECF0B5',
     },
     Jubilation: {
-      main: '',
+      main: '#F2F4C3',
     },
     Euphoric: {
-      main: '',
+      main: '#ECF0B5',
     },
     Zeal: {
-      main: '',
+      main: '#E3F0B8',
     },
     Excited: {
-      main: '',
+      main: '#DCEBA8',
     },
     Hopeful: {
-      main: '',
+      main: '#E0EEB0',
     },
     Eager: {
-      main: '',
+      main: '#D6E99A',
     },
     Illustrious: {
-      main: '',
+      main: '#D5E9AA',
     },
     Triumphant: {
-      main: '',
+      main: '#C6E69D',
     },
     Blissful: {
-      main: '',
+      main: '#CBE8B0',
     },
     Jovial: {
-      main: '',
+      main: '#B8E19B',
     },
     Delighted: {
-      main: '',
+      main: '#BCE2AF',
     },
     Amused: {
-      main: '',
+      main: '#ACDD9C',
     },
     Pleased: {
-      main: '',
+      main: '#AADCA7',
     },
     Touched: {
-      main: '',
+      main: '#BBE5D1',
     },
     Stimulated: {
-      main: '',
+      main: '#ABDFC8',
     },
     Astounded: {
-      main: '',
+      main: '#CAEADB',
     },
     Speechless: {
-      main: '',
+      main: '#B9E6D2',
     },
     Awestruck: {
-      main: '',
+      main: '#CDEDE8',
     },
     Astonished: {
-      main: '',
+      main: '#B9E8E2',
     },
     Perplexed: {
-      main: '',
+      main: '#CEE8E5',
     },
     Disillusioned: {
-      main: '',
+      main: '#BEE3DC',
     },
     Dismayed: {
-      main: '',
+      main: '#C4EAED',
     },
     Shocked: {
-      main: '',
+      main: '#B6E3E9',
     },
     Powerless: {
-      main: '',
+      main: '#C6E5E8',
     },
     Grief: {
-      main: '',
+      main: '#B5DAE2',
     },
     Lonely: {
-      main: '',
+      main: '#CAE2EE',
     },
     Isolated: {
-      main: '',
+      main: '#B7D4E4',
     },
     Guilty: {
-      main: '',
+      main: '#C5D6EA',
     },
     Regretful: {
-      main: '',
+      main: '#BACAE4',
     },
     Displeased: {
-      main: '',
+      main: '#C0C5E3',
     },
     Sorrow: {
-      main: '',
+      main: '#C7C2E2',
     },
     Depressed: {
-      main: '',
+      main: '#B8ADD8',
     },
     Hurt: {
-      main: '',
+      main: '#C2B8DA',
     },
     Agony: {
-      main: '',
+      main: '#B3A6D4',
     },
     Revolted: {
-      main: '',
+      main: '#C8A3C5',
     },
     Contempt: {
-      main: '',
+      main: '#C394C2',
     },
     Jealous: {
-      main: '',
+      main: '#D8A4CB',
     },
     Resentful: {
-      main: '',
+      main: '#CE92C5',
     },
     Aggravated: {
-      main: '',
+      main: '#E7A2CE',
     },
     Annoyed: {
-      main: '',
+      main: '#DE95C3',
     },
     Frustrated: {
-      main: '',
+      main: '#EF9EC7',
     },
     Agitated: {
-      main: '',
+      main: '#E990BE',
     },
     Hostile: {
-      main: '',
+      main: '#F68FBA',
     },
     Hate: {
-      main: '',
+      main: '#F48FB7',
     },
     Dread: {
-      main: '',
+      main: '#FCA1B3',
     },
     Mortified: {
-      main: '',
+      main: '#F892A0',
     },
     Anxious: {
-      main: '',
+      main: '#FEA2A7',
     },
     Worried: {
-      main: '',
+      main: '#F89496',
     },
     Inadequate: {
-      main: '',
+      main: '#FEA3A2',
     },
     Inferior: {
-      main: '',
+      main: '#F99691',
     },
     Hysterical: {
-      main: '',
+      main: '#FEAEA5',
     },
     Panic: {
-      main: '',
+      main: '#FDA192',
     },
     Helpless: {
-      main: '',
+      main: '#FFBBA4',
     },
     Frightened: {
-      main: '',
+      main: '#FEB193',
     },
   },
 });
