@@ -9,6 +9,9 @@ export default function JournalList() {
   const [click, setClick] = useState(false);
   const history = useHistory();
 
+  // we shouldn't use useEffect in presentational components
+  // instead move this into the User component and pass
+  // the journals as a prop
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchJournals();

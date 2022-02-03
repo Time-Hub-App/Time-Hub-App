@@ -1,14 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render a header 1`] = `
-<div>
-  <div
-    class="journallist"
-  />
-</div>
-`;
-
-exports[`should render a journallist presentational component 1`] = `
+exports[`should render a journal list presentational component 1`] = `
 <div>
   <div
     class="journallist"

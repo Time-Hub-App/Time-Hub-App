@@ -1,50 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render a header 1`] = `
-<div>
-  <div>
-    <header>
-      <h3
-        class=""
-      >
-        Home
-      </h3>
-      <h3
-        class=""
-      >
-        About
-      </h3>
-      <h3
-        class=""
-      >
-        Log In
-      </h3>
-      <h3
-        class="active"
-      >
-        Journals
-      </h3>
-    </header>
-    <a
-      href="/journals/new"
-    >
-      Create Journal
-    </a>
-    <div
-      class="journallist"
-    />
-    <footer>
-      <a
-        class="footer-link"
-        href="/https://github.com/Time-Hub-App"
-      >
-        TimeHub GitHub
-      </a>
-    </footer>
-  </div>
-</div>
-`;
-
 exports[`should render a user view component 1`] = `
 <div>
   <div>
@@ -70,18 +25,18 @@ exports[`should render a user view component 1`] = `
         Journals
       </h3>
     </header>
-    <a
-      href="/journals/new"
+    <h2
+      class="create-journal"
     >
       Create Journal
-    </a>
+    </h2>
     <div
       class="journallist"
     />
     <footer>
       <a
         class="footer-link"
-        href="/https://github.com/Time-Hub-App"
+        href="https://github.com/Time-Hub-App"
       >
         TimeHub GitHub
       </a>
