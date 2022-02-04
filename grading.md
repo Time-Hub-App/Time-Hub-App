@@ -6,6 +6,7 @@
   - remove the login link when you're logged in
 - Had to deduct some points for tests - some of them are logging after the test is done which means you're not awaiting the async content to load on the page
 - Your JournalList component is using a useEffect - move that to the Container component to make sure JournalList remains presentational
+- Overall good job with this -- the timeline is really cool and I love your custom colors. I know you were really close with the heat map - just let me know if you want help getting that implemented.
 
 | Rubric                                                                    | Deduction |
 | ------------------------------------------------------------------------- | --------- |
