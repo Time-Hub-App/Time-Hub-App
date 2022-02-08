@@ -24,16 +24,17 @@ exports[`should render an about view component 1`] = `
       Journals
     </h3>
   </header>
-  <h1>
-    TimeHub
-  </h1>
+  <img
+    height="350px"
+    src="TIMEHUB_LOGO.png"
+  />
   <div
     class="timehub-bio"
   >
     <span>
-      Journaling is a very underrated activity that boosts your well-being in just a few minutes a day!
+      Why are we doing what we are doing in the first place? Recognizing your emotions is one of the most important skills you can have.
       <br />
-      A paper notebook and pen are fine for journaling, but TimeHub offers more! Jot your thoughts down or record what happened during the day for a simple way to manage stress, enhance creativity, increase happiness, and track your emotions.
+      People who are good at noticing how they feel are more likely to be able calm themselves down and/or adjust their behavior.
     </span>
   </div>
   <div>
@@ -42,7 +43,7 @@ exports[`should render an about view component 1`] = `
     </h2>
   </div>
   <div
-    class="developer-container"
+    class="developers-container"
   >
     <div
       class="developer-bio"
@@ -53,27 +54,22 @@ exports[`should render an about view component 1`] = `
         Fora Heims, Full Stack Software Developer
       </h3>
       <ul>
-        <div>
-          <a
-            href="/https://www.linkedin.com/in/fora-heims/"
-          >
-            LinkedIn
-          </a>
-        </div>
-        <div>
-          <a
-            href="/https://github.com/fora-heims"
-          >
-            GitHub
-          </a>
-        </div>
+        <a
+          href="https://www.linkedin.com/in/fora-heims/"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://github.com/fora-heims"
+        >
+          GitHub
+        </a>
       </ul>
       <div>
         <p
           class="bio-text"
         >
-          Fora is a dedicated, efficient and strategic developer. Because of their strong foundation of software related knowledge, Fora can produce productive, long-lasting, and clean code.
-           
+          Fora is a web developer in the Portland, OR area.
         </p>
       </div>
     </div>
@@ -86,20 +82,16 @@ exports[`should render an about view component 1`] = `
         Libbi Dunham, Full Stack Software Developer
       </h3>
       <ul>
-        <div>
-          <a
-            href="/https://www.linkedin.com/in/libbi-dunham/"
-          >
-            LinkedIn
-          </a>
-        </div>
-        <div>
-          <a
-            href="/https://github.com/Libbi-Dunham"
-          >
-            GitHub
-          </a>
-        </div>
+        <a
+          href="https://www.linkedin.com/in/libbi-dunham/"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://github.com/Libbi-Dunham"
+        >
+          GitHub
+        </a>
       </ul>
       <p
         class="bio-text"
@@ -116,20 +108,16 @@ exports[`should render an about view component 1`] = `
         Ckay Natividad, Full Stack Software Developer
       </h3>
       <ul>
-        <div>
-          <a
-            href="/https://www.linkedin.com/in/ckaynatividad/"
-          >
-            LinkedIn
-          </a>
-        </div>
-        <div>
-          <a
-            href="/https://github.com/ckaynatividad"
-          >
-            GitHub
-          </a>
-        </div>
+        <a
+          href="https://www.linkedin.com/in/ckaynatividad/"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://github.com/ckaynatividad"
+        >
+          GitHub
+        </a>
       </ul>
       <p
         class="bio-text2"
@@ -147,20 +135,16 @@ exports[`should render an about view component 1`] = `
         Abriel Cleaver, Full Stack Software Developer
       </h3>
       <ul>
-        <div>
-          <a
-            href="/https://www.linkedin.com/in/abrielcleaver/"
-          >
-            LinkedIn
-          </a>
-        </div>
-        <div>
-          <a
-            href="/https://github.com/abrielcleaver"
-          >
-            GitHub
-          </a>
-        </div>
+        <a
+          href="https://www.linkedin.com/in/abrielcleaver/"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://github.com/abrielcleaver"
+        >
+          GitHub
+        </a>
       </ul>
       <p
         class="bio-text2"
@@ -173,7 +157,7 @@ exports[`should render an about view component 1`] = `
   <footer>
     <a
       class="footer-link"
-      href="/https://github.com/Time-Hub-App"
+      href="https://github.com/Time-Hub-App"
     >
       TimeHub GitHub
     </a>
