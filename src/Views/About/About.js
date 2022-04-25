@@ -22,13 +22,13 @@ export default function About({ user, setUser }) {
       </div>
       <div className="developers-container">
         <div className="developer-bio">
-          <h3 className="name">Fora Heims, Full Stack Software Developer</h3>
+          <h3 className="name">Forest Heims, Full Stack Software Developer</h3>
           <ul>
-            <a href="https://www.linkedin.com/in/fora-heims/">LinkedIn</a>
-            <a href="https://github.com/fora-heims">GitHub</a>
+            <a href="https://www.linkedin.com/in/forestheims/">LinkedIn</a>
+            <a href="https://github.com/forestheims">GitHub</a>
           </ul>
           <div>
-            <p className="bio-text">Fora is a web developer in the Portland, OR area.</p>
+            <p className="bio-text">Forest is a web developer in the Portland, OR area.</p>
           </div>
         </div>
         <div className="developer-bio">
